@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 20:37:42 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/05 20:46:01 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/21 23:34:59 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/22 12:53:36 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+int	main(int argc, char *argv[])
 {
-	char	c;
+	int	i;
+	int	j;
 
-	c = '0';
-	while (c <= '9')
+	i = 1;
+	while (i < argc)
 	{
-		write(1, &c, 1);
-		c++;
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		write(1, "\n", 1);
+		i++;
 	}
 }
-
-// int main(void)
-// {
-// 	ft_print_numbers();
-// 	return(0);
-// }

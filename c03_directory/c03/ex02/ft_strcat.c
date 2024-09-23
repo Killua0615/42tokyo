@@ -6,14 +6,14 @@
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:29:43 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/11 17:27:07 by nateshim         ###   ########.fr       */
+/*   Updated: 2024/09/13 23:23:51 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	s;
@@ -38,9 +38,10 @@ char	*ft_strcpy(char *dest, char *src)
 // {
 // 	char	dest[10] = "42";
 // 	char	src[] = "tokyo";
-
+// 	char	dest2[10] = "42";
 // 	printf("第一引数 = %s\n", dest);
 // 	printf("第二引数 = %s\n", src);
 // 	ft_strcpy(dest, src);
-// 	printf("結合 = %s\n", dest);
+// 	printf("結合 = %s\n\n", dest);
+// 	printf("実際の関数の動き = %s\n", strcat(dest2, src));
 // }

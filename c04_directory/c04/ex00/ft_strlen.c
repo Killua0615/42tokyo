@@ -1,49 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 05:48:45 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/15 03:58:49 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/15 07:15:07 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/21 16:29:36 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(const char *str)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')
+	{
 		i++;
+	}
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	x;
+// int	main(int argc, char *argv[])
+// {
+// 	char *a;
 
-	x = ft_strlen(src);
-	i = 0;
-	if (size != 0)
-	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (x);
-}
+// 	a = argv[1];
 
-int	main(void)
-{
-	char src[] = "World!";
-	char dest[] = "Hello ";
-	printf("%d | %s", ft_strlcpy(dest, src, 10), dest);
-}
+// 	if (argc != 2)
+// 	{
+// 		printf("1つの文字列を返してください");
+// 		return (1);
+// 	}
+
+// 	unsigned int length = ft_strlen(a);
+
+// 	printf("文字の長さは: %u\n", length);
+// 	return (0);
+// }

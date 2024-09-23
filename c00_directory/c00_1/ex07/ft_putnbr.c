@@ -1,31 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 19:56:23 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/05 20:23:37 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/15 11:50:45 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/15 11:53:43 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char c;
-
-	c = 'a';
-	while (c <= 'z')
-	{
-		write(1, &c, 1);
-		c++;
-	}
-}
-
-int	main(void)
-{
-	ft_print_alphabet();
-	return(0);
 }
