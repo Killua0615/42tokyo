@@ -5,45 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 15:47:53 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/11 16:44:50 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/05 21:48:14 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/07 21:39:09 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print(void)
+void	ft_print_comb(void)
 {
-	char	f;
-	char	s;
-	char	t;
+	int	a;
+	int	b;
+	int	c;
 
-	f = '0';
-	while (f <= '7')
+	a = '0';
+	while (a <= '7')
 	{
-		s = f + 1;
-		while (s <= '8')
+		b = a + 1;
+		while (b <= '8')
 		{
-			t = s + 1;
-			while (t <= '9')
+			c = b + 1;
+			while (c <= '9')
 			{
-				write(1, &f, 1);
-				write(1, &s, 1);
-				write(1, &t, 1);
-				if (f != '9' || s != '8' || t != '7')
-				{
+				write(1, &a, 1);
+				write(1, &b, 1);
+				write(1, &c, 1);
+				if (a != '7')
 					write(1, ", ", 2);
-				}
-				t++;
+				c++;
 			}
-			s++;
+			b++;
 		}
-		f++;
+		a++;
 	}
 }
 
-int	main(void)
-{
-	ft_print();
-	return (0);
-}
+// int main (void)
+// {
+// 	ft_print_comb();
+// 	return(0);
+// }

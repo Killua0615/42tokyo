@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 14:31:37 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/11 14:35:00 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/04 22:02:43 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/07 13:55:15 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	ft_print_numbers(void)
 {
-	char	i;
+	char	c;
 
-	i = '0';
-	while (i <= '9')
+	c = '0';
+	while (c <= '9')
 	{
-		write(1, &i, 1);
-		i++;
+		write(1, &c, 1);
+		c++;
 	}
 }
 
-int	main(void)
-{
-	ft_print_numbers();
-}
+// int  main(void)
+// {
+// 	ft_print_numbers();
+// 	return (0);
+// }

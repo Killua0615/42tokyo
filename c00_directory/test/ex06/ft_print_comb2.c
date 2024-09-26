@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 21:50:54 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/12 19:11:10 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/06 22:38:55 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/24 14:06:27 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -17,23 +18,25 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_comb(int a, int b)
+void	ft_write_comb(int a, int b, bool last)
 {
 	ft_putchar(48 + a / 10);
 	ft_putchar(48 + a % 10);
 	ft_putchar(' ');
 	ft_putchar(48 + b / 10);
 	ft_putchar(48 + b % 10);
-	if (a != 99 || b != 99)
+	if (last)
 	{
-		write(1, ", ", 2);
+		ft_putchar(',');
+		ft_putchar(' ');
 	}
 }
 
 void	ft_print_comb2(void)
 {
-	int	a;
-	int	b;
+	int		a;
+	int		b;
+	bool	last;
 
 	a = 0;
 	while (a <= 99)
@@ -41,15 +44,15 @@ void	ft_print_comb2(void)
 		b = a + 1;
 		while (b <= 99)
 		{
-			ft_print_comb(a, b);
+			last = !(a == 98 && b == 99);
+			ft_write_comb(a, b, last);
 			b++;
 		}
 		a++;
 	}
 }
 
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_comb2();
+// }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 14:13:39 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/11 14:20:47 by nateshim         ###   ########.fr       */
+/*   Created: 2024/09/04 21:59:04 by nateshim          #+#    #+#             */
+/*   Updated: 2024/09/05 15:43:09 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	ft_print_alphabet(void)
 {
-	char	i;
+	char	c;
 
-	i = 'a';
-	while (i <= 'z')
+	c = 'a';
+	while (c <= 'z')
 	{
-		write(1, &i, 1);
-		i++;
+		write(1, &c, 1);
+		c++;
 	}
 }
 
-int	main(void)
-{
-	ft_print_alphabet();
-}
+// int   main(void)
+// {
+//     ft_print_alphabet();
+//     return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: nateshim <nateshim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:45:29 by nateshim          #+#    #+#             */
-/*   Updated: 2024/09/23 15:32:02 by nateshim         ###   ########.fr       */
+/*   Updated: 2024/09/23 22:02:22 by nateshim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ void	ft_swap(char **a, char **b)
 
 int	main(int argc, char *argv[])
 {
-	int j;
-	int x;
+	int	j;
+	int	x;
 
 	x = 1;
 	while (x < argc - 1)
